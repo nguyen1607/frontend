@@ -1,21 +1,22 @@
 const http = require('http');
+const port = 3000;
 
-var routers = {
-    '/mode': (req, res) => {
+var routes = {
+    '/index': (req, res) => {
         res.writeHead(200);
-        res.end("<h1>Application</h1>");
-    }
-}
-
-function index (req, res) {
-    res.writeHead(200);
-    res.end('Connected!');
+        res.end('OK');
+    },
+    '/home': (req, res) => {
+        res.writeHead(200);
+        res.end('You\'re visiting HomePage');
+    },
 };
 
-http.createServer(function (req, res) {
-    if (req.url === '/') {
-        return index(req, res);
+http.createServer((req, res) => {
+    if (req.url in routes) {
+        return routes[req.url](req, res);
     }
     res.writeHead(404);
+    res.write('Not correct Request\n');
     res.end(http.STATUS_CODES[404]);
-}).listen(3000);
+}).listen(port);
