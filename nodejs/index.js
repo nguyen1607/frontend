@@ -10,7 +10,7 @@ var routes = {
     },
     '/home': (req, res) => {
         res.writeHead(200);
-        res.end('You\'re visiting HomePage');
+        res.end(alert('You\'re visiting HomePage'));
     },
 };
 
