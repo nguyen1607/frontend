@@ -1,6 +1,8 @@
 const http = require('http');
 const port = 3000;
-
+var fs = require('fs');
+var data = fs.readFileSync('text.txt');
+console.log(data.toString());
 var routes = {
     '/index': (req, res) => {
         res.writeHead(200);
