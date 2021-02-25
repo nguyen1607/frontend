@@ -8,11 +8,13 @@ var routes = {
         res.writeHead(200);
         res.end('OK');
     },
+
     '/home': (req, res) => {
         res.writeHead(200);
-        res.end(alert('You\'re visiting HomePage'));
+        res.end('You\'re visiting HomePage');
     },
 };
+
 
 http.createServer((req, res) => {
     if (req.url in routes) {
