@@ -8,17 +8,21 @@
 // Mixins
 .max_width {
     max-width: 1000px;
-    padding: 0 50px;
+    padding: 0 25px;
     margin: auto;
+}
+.sticky {
+    padding: 15px 0;
+    background: crimson;
 }
 
 //Navigation Bar styling
-.navbar {
+#navbar {
     position: fixed;
     width: 100%;
-    padding: 15px 0;
-    background: crimson;
+    padding: 30px 0;
     font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3s ease;
     .max-width {
         display: flex;
         align-items: center;
@@ -36,11 +40,16 @@
             li {
                 list-style: none;
                 display: inline-block;
+                
                 a {
                     color: #ffff;
                     font-size: 20px;
                     font-weight: 500;
                     margin: 0 10px;
+                    transition: color 0.3s;
+                }
+                a:hover {
+                    color: crimson;
                 }
             }
         }
@@ -50,6 +59,34 @@
 // Home Section Styling
 .home {
     display: flex;
-    background: url('image/landing.jpg') no-repeat center;
+    background: url("../image/landing.jpg") no-repeat center;
     height: 100vh;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #ffff;
+    min-height: 500px;
+    font-family: 'Ubuntu', sans-serif;
+
+    .max-width {
+        margin: auto 0 auto 40px;
+        .home-content {
+            .text-1 {
+                font-size: 30px;
+            }
+            .text-2 {
+                font-size: 75px;
+                font-weight: 500;
+                margin-left: -3px;
+            }
+            .text-3 {
+                font-size: 40px;
+                margin: 5px 0;
+
+                span {
+                    font-weight: 500;
+                    color: crimson;
+                }
+            }
+        }
+    }
 }
