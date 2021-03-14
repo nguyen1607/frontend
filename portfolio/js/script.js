@@ -12,5 +12,4 @@ window.onscroll = () => {
 
 $('.menu-btn').click(() => {
     $('.menu').toggleClass("active");
-    $('.menu-btn i').toggleClass("active");
 });

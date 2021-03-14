@@ -22,7 +22,7 @@
     width: 100%;
     padding: 30px 0;
     font-family: 'Ubuntu', sans-serif;
-    transition: all 0.2s ease;
+    transition: all 0.3s ease;
     .max-width {
         display: flex;
         align-items: center;
@@ -103,7 +103,6 @@
 // Responsive media
 @media (max-width: 800px) {
     #navbar {
-
         .max-width {
             padding: 0 50px;
 
@@ -116,7 +115,7 @@
                 background: #000;
                 text-align: center;
                 padding-top: 50px;
-                // display: none;
+                //display: none;
                 li {
                     display: block;
                     a {
@@ -133,10 +132,6 @@
             .menu-btn {
                 display: block;
                 z-index: 1000;
-                
-                i.activate:before {
-                    content: "\f00d";
-                }
             }
         }
     }
@@ -164,5 +159,4 @@
                 }
             }
         }
-        
     }
