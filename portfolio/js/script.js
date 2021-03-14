@@ -1,8 +1,6 @@
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-    document.getElementById("navbar").style.background = "crimson";
+window.onscroll = () => {
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    document.getElementById("navbar").style.background = "black";
     document.getElementById("navbar").style.padding = "10px 0";
 
     } else {
@@ -11,3 +9,8 @@ function scrollFunction() {
 
     }
 }
+
+$('.menu-btn').click(() => {
+    $('.menu').toggleClass("active");
+    $('.menu-btn i').toggleClass("active");
+});
